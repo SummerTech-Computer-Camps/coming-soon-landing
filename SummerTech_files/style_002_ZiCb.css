@@ -1,0 +1,616 @@
+@font-face {
+    font-family: "nic-icons";
+    src: url("fonts/nic-icons.woff2") format("woff2"),
+        url("fonts/nic-icons.ttf") format("truetype"),
+        url("fonts/nic-icons.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+.icon, [class^="icon-"], [class*=" icon-"] {
+    /* Use !important to prevent extensions from overriding this font. */
+    font-family: "nic-icons" !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+:root {
+    --icon-star: "\f093";
+    --icon-summertech-starburst: "\f092";
+    --icon-teacher-teaching: "\f091";
+    --icon-graduation-cap: "\f090";
+    --icon-screen-art: "\f08f";
+    --icon-code-block-2: "\f08e";
+    --icon-discord: "\f08d";
+    --icon-youtube: "\f08c";
+    --icon-tik-tok: "\f08b";
+    --icon-insta: "\f08a";
+    --icon-calendar-2: "\f089";
+    --icon-phone: "\f088";
+    --icon-email: "\f086";
+    --icon-treadmill: "\f087";
+    --icon-mountain: "\f085";
+    --icon-forks-and-knives: "\f084";
+    --icon-fort-awesome: "\f083";
+    --icon-game-controller: "\f082";
+    --icon-sword-and-shield: "\f081";
+    --icon-screen-heart: "\f080";
+    --icon-zeni: "\f07f";
+    --icon-cheque: "\f07e";
+    --icon-credit-card: "\f07d";
+    --icon-money-shield: "\f07c";
+    --icon-moon-calendar: "\f07b";
+    --icon-moon: "\f07a";
+    --icon-sun: "\f079";
+    --icon-book: "\f078";
+    --icon-allergies: "\f077";
+    --icon-hamburger: "\f076";
+    --icon-mountain-flag: "\f075";
+    --icon-calendar-heart: "\f074";
+    --icon-microphone-karaoke: "\f073";
+    --icon-futbol: "\f072";
+    --icon-star-man: "\f071";
+    --icon-computer-kid: "\f070";
+    --icon-flag: "\f06f";
+    --icon-sadmac: "\f06e";
+    --icon-windows: "\f06d";
+    --icon-bug: "\f06c";
+    --icon-flow-chart: "\f06b";
+    --icon-bash: "\f06a";
+    --icon-sliders: "\f069";
+    --icon-music-note: "\f068";
+    --icon-microphone: "\f067";
+    --icon-slate: "\f066";
+    --icon-editing: "\f065";
+    --icon-megaphone: "\f064";
+    --icon-camera: "\f063";
+    --icon-document: "\f062";
+    --icon-is-it-about-my-cube: "\f061";
+    --icon-run: "\f060";
+    --icon-sun-dial: "\f05f";
+    --icon-movie-theater-carpet: "\f05e";
+    --icon-pyramid: "\f05d";
+    --icon-conical-pyramid: "\f05c";
+    --icon-play-video: "\f05b";
+    --icon-winky-face: "\f05a";
+    --icon-animation-frames: "\f059";
+    --icon-drawing-tablet-2: "\f058";
+    --icon-ortho: "\f057";
+    --icon-screen-landscape: "\f056";
+    --icon-eye: "\f055";
+    --icon-brightness-contrast: "\f054";
+    --icon-shapes: "\f053";
+    --icon-screen-pencil: "\f052";
+    --icon-website-wreath: "\f051";
+    --icon-color-palette: "\f050";
+    --icon-cursor-click: "\f04f";
+    --icon-website-2: "\f04e";
+    --icon-code-source-window: "\f04d";
+    --icon-handful-o-people: "\f04c";
+    --icon-chat-people: "\f04b";
+    --icon-graduate-hat: "\f04a";
+    --icon-phone-and-folder: "\f049";
+    --icon-headwires: "\f048";
+    --icon-robot: "\f047";
+    --icon-database: "\f046";
+    --icon-gear-and-shapes: "\f045";
+    --icon-clipboard: "\f044";
+    --icon-doctors-bag: "\f043";
+    --icon-speech-bubbles: "\f042";
+    --icon-money-calendar: "\f041";
+    --icon-website: "\f040";
+    --icon-photo-stack: "\f03f";
+    --icon-phone-and-message: "\f03e";
+    --icon-dap: "\f03d";
+    --icon-three-wise-men: "\f03c";
+    --icon-graduate: "\f03b";
+    --icon-java: "\f03a";
+    --icon-wreath-crown: "\f039";
+    --icon-filters: "\f038";
+    --icon-maths: "\f037";
+    --icon-text-area: "\f036";
+    --icon-game-controller-2: "\f035";
+    --icon-gear-window: "\f034";
+    --icon-play-button: "\f033";
+    --icon-wreath-star: "\f032";
+    --icon-route-2: "\f031";
+    --icon-folder: "\f030";
+    --icon-bugnifying-glass: "\f02f";
+    --icon-brain-bulb: "\f02e";
+    --icon-path: "\f02d";
+    --icon-rocket-ship: "\f02c";
+    --icon-code-guy: "\f02b";
+    --icon-code-block: "\f02a";
+    --icon-face-plant: "\f01c";
+    --icon-event: "\f029";
+    --icon-arrow: "\f028";
+    --icon-visual: "\f000";
+    --icon-video-game: "\f001";
+    --icon-three-people: "\f002";
+    --icon-team: "\f003";
+    --icon-tasks: "\f004";
+    --icon-student: "\f005";
+    --icon-stamp: "\f006";
+    --icon-route: "\f007";
+    --icon-python: "\f008";
+    --icon-programming: "\f009";
+    --icon-open-bookcopy: "\f00a";
+    --icon-open-book-2: "\f00b";
+    --icon-open-book: "\f00c";
+    --icon-music: "\f00d";
+    --icon-mail: "\f00e";
+    --icon-location: "\f00f";
+    --icon-javascript: "\f010";
+    --icon-help: "\f011";
+    --icon-hearthands: "\f012";
+    --icon-handshake: "\f013";
+    --icon-gear-on-stack: "\f014";
+    --icon-gear-and-spanner: "\f015";
+    --icon-gallery: "\f016";
+    --icon-form: "\f017";
+    --icon-first-aid-kit: "\f018";
+    --icon-film: "\f019";
+    --icon-familycopy: "\f01a";
+    --icon-family: "\f01b";
+    --icon-eating: "\f01d";
+    --icon-drawing-tablet: "\f01e";
+    --icon-critical-thinking: "\f01f";
+    --icon-collage: "\f020";
+    --icon-class: "\f021";
+    --icon-check-start: "\f022";
+    --icon-calendarcopy: "\f023";
+    --icon-calendar: "\f024";
+    --icon-article: "\f025";
+    --icon-animation: "\f026";
+    --icon-3d-modeling: "\f027";
+}
+.icon-star:before {
+    content: var(--icon-star);
+}
+.icon-summertech-starburst:before {
+    content: var(--icon-summertech-starburst);
+}
+.icon-teacher-teaching:before {
+    content: var(--icon-teacher-teaching);
+}
+.icon-graduation-cap:before {
+    content: var(--icon-graduation-cap);
+}
+.icon-screen-art:before {
+    content: var(--icon-screen-art);
+}
+.icon-code-block-2:before {
+    content: var(--icon-code-block-2);
+}
+.icon-discord:before {
+    content: var(--icon-discord);
+}
+.icon-youtube:before {
+    content: var(--icon-youtube);
+}
+.icon-tik-tok:before {
+    content: var(--icon-tik-tok);
+}
+.icon-insta:before {
+    content: var(--icon-insta);
+}
+.icon-calendar-2:before {
+    content: var(--icon-calendar-2);
+}
+.icon-phone:before {
+    content: var(--icon-phone);
+}
+.icon-email:before {
+    content: var(--icon-email);
+}
+.icon-treadmill:before {
+    content: var(--icon-treadmill);
+}
+.icon-mountain:before {
+    content: var(--icon-mountain);
+}
+.icon-forks-and-knives:before {
+    content: var(--icon-forks-and-knives);
+}
+.icon-fort-awesome:before {
+    content: var(--icon-fort-awesome);
+}
+.icon-game-controller:before {
+    content: var(--icon-game-controller);
+}
+.icon-sword-and-shield:before {
+    content: var(--icon-sword-and-shield);
+}
+.icon-screen-heart:before {
+    content: var(--icon-screen-heart);
+}
+.icon-zeni:before {
+    content: var(--icon-zeni);
+}
+.icon-cheque:before {
+    content: var(--icon-cheque);
+}
+.icon-credit-card:before {
+    content: var(--icon-credit-card);
+}
+.icon-money-shield:before {
+    content: var(--icon-money-shield);
+}
+.icon-moon-calendar:before {
+    content: var(--icon-moon-calendar);
+}
+.icon-moon:before {
+    content: var(--icon-moon);
+}
+.icon-sun:before {
+    content: var(--icon-sun);
+}
+.icon-book:before {
+    content: var(--icon-book);
+}
+.icon-allergies:before {
+    content: var(--icon-allergies);
+}
+.icon-hamburger:before {
+    content: var(--icon-hamburger);
+}
+.icon-mountain-flag:before {
+    content: var(--icon-mountain-flag);
+}
+.icon-calendar-heart:before {
+    content: var(--icon-calendar-heart);
+}
+.icon-microphone-karaoke:before {
+    content: var(--icon-microphone-karaoke);
+}
+.icon-futbol:before {
+    content: var(--icon-futbol);
+}
+.icon-star-man:before {
+    content: var(--icon-star-man);
+}
+.icon-computer-kid:before {
+    content: var(--icon-computer-kid);
+}
+.icon-flag:before {
+    content: var(--icon-flag);
+}
+.icon-sadmac:before {
+    content: var(--icon-sadmac);
+}
+.icon-windows:before {
+    content: var(--icon-windows);
+}
+.icon-bug:before {
+    content: var(--icon-bug);
+}
+.icon-flow-chart:before {
+    content: var(--icon-flow-chart);
+}
+.icon-bash:before {
+    content: var(--icon-bash);
+}
+.icon-sliders:before {
+    content: var(--icon-sliders);
+}
+.icon-music-note:before {
+    content: var(--icon-music-note);
+}
+.icon-microphone:before {
+    content: var(--icon-microphone);
+}
+.icon-slate:before {
+    content: var(--icon-slate);
+}
+.icon-editing:before {
+    content: var(--icon-editing);
+}
+.icon-megaphone:before {
+    content: var(--icon-megaphone);
+}
+.icon-camera:before {
+    content: var(--icon-camera);
+}
+.icon-document:before {
+    content: var(--icon-document);
+}
+.icon-is-it-about-my-cube:before {
+    content: var(--icon-is-it-about-my-cube);
+}
+.icon-run:before {
+    content: var(--icon-run);
+}
+.icon-sun-dial:before {
+    content: var(--icon-sun-dial);
+}
+.icon-movie-theater-carpet:before {
+    content: var(--icon-movie-theater-carpet);
+}
+.icon-pyramid:before {
+    content: var(--icon-pyramid);
+}
+.icon-conical-pyramid:before {
+    content: var(--icon-conical-pyramid);
+}
+.icon-play-video:before {
+    content: var(--icon-play-video);
+}
+.icon-winky-face:before {
+    content: var(--icon-winky-face);
+}
+.icon-animation-frames:before {
+    content: var(--icon-animation-frames);
+}
+.icon-drawing-tablet-2:before {
+    content: var(--icon-drawing-tablet-2);
+}
+.icon-ortho:before {
+    content: var(--icon-ortho);
+}
+.icon-screen-landscape:before {
+    content: var(--icon-screen-landscape);
+}
+.icon-eye:before {
+    content: var(--icon-eye);
+}
+.icon-brightness-contrast:before {
+    content: var(--icon-brightness-contrast);
+}
+.icon-shapes:before {
+    content: var(--icon-shapes);
+}
+.icon-screen-pencil:before {
+    content: var(--icon-screen-pencil);
+}
+.icon-website-wreath:before {
+    content: var(--icon-website-wreath);
+}
+.icon-color-palette:before {
+    content: var(--icon-color-palette);
+}
+.icon-cursor-click:before {
+    content: var(--icon-cursor-click);
+}
+.icon-website-2:before {
+    content: var(--icon-website-2);
+}
+.icon-code-source-window:before {
+    content: var(--icon-code-source-window);
+}
+.icon-handful-o-people:before {
+    content: var(--icon-handful-o-people);
+}
+.icon-chat-people:before {
+    content: var(--icon-chat-people);
+}
+.icon-graduate-hat:before {
+    content: var(--icon-graduate-hat);
+}
+.icon-phone-and-folder:before {
+    content: var(--icon-phone-and-folder);
+}
+.icon-headwires:before {
+    content: var(--icon-headwires);
+}
+.icon-robot:before {
+    content: var(--icon-robot);
+}
+.icon-database:before {
+    content: var(--icon-database);
+}
+.icon-gear-and-shapes:before {
+    content: var(--icon-gear-and-shapes);
+}
+.icon-clipboard:before {
+    content: var(--icon-clipboard);
+}
+.icon-doctors-bag:before {
+    content: var(--icon-doctors-bag);
+}
+.icon-speech-bubbles:before {
+    content: var(--icon-speech-bubbles);
+}
+.icon-money-calendar:before {
+    content: var(--icon-money-calendar);
+}
+.icon-website:before {
+    content: var(--icon-website);
+}
+.icon-photo-stack:before {
+    content: var(--icon-photo-stack);
+}
+.icon-phone-and-message:before {
+    content: var(--icon-phone-and-message);
+}
+.icon-dap:before {
+    content: var(--icon-dap);
+}
+.icon-three-wise-men:before {
+    content: var(--icon-three-wise-men);
+}
+.icon-graduate:before {
+    content: var(--icon-graduate);
+}
+.icon-java:before {
+    content: var(--icon-java);
+}
+.icon-wreath-crown:before {
+    content: var(--icon-wreath-crown);
+}
+.icon-filters:before {
+    content: var(--icon-filters);
+}
+.icon-maths:before {
+    content: var(--icon-maths);
+}
+.icon-text-area:before {
+    content: var(--icon-text-area);
+}
+.icon-game-controller-2:before {
+    content: var(--icon-game-controller-2);
+}
+.icon-gear-window:before {
+    content: var(--icon-gear-window);
+}
+.icon-play-button:before {
+    content: var(--icon-play-button);
+}
+.icon-wreath-star:before {
+    content: var(--icon-wreath-star);
+}
+.icon-route-2:before {
+    content: var(--icon-route-2);
+}
+.icon-folder:before {
+    content: var(--icon-folder);
+}
+.icon-bugnifying-glass:before {
+    content: var(--icon-bugnifying-glass);
+}
+.icon-brain-bulb:before {
+    content: var(--icon-brain-bulb);
+}
+.icon-path:before {
+    content: var(--icon-path);
+}
+.icon-rocket-ship:before {
+    content: var(--icon-rocket-ship);
+}
+.icon-code-guy:before {
+    content: var(--icon-code-guy);
+}
+.icon-code-block:before {
+    content: var(--icon-code-block);
+}
+.icon-face-plant:before {
+    content: var(--icon-face-plant);
+}
+.icon-event:before {
+    content: var(--icon-event);
+}
+.icon-arrow:before {
+    content: var(--icon-arrow);
+}
+.icon-visual:before {
+    content: var(--icon-visual);
+}
+.icon-video-game:before {
+    content: var(--icon-video-game);
+}
+.icon-three-people:before {
+    content: var(--icon-three-people);
+}
+.icon-team:before {
+    content: var(--icon-team);
+}
+.icon-tasks:before {
+    content: var(--icon-tasks);
+}
+.icon-student:before {
+    content: var(--icon-student);
+}
+.icon-stamp:before {
+    content: var(--icon-stamp);
+}
+.icon-route:before {
+    content: var(--icon-route);
+}
+.icon-python:before {
+    content: var(--icon-python);
+}
+.icon-programming:before {
+    content: var(--icon-programming);
+}
+.icon-open-bookcopy:before {
+    content: var(--icon-open-bookcopy);
+}
+.icon-open-book-2:before {
+    content: var(--icon-open-book-2);
+}
+.icon-open-book:before {
+    content: var(--icon-open-book);
+}
+.icon-music:before {
+    content: var(--icon-music);
+}
+.icon-mail:before {
+    content: var(--icon-mail);
+}
+.icon-location:before {
+    content: var(--icon-location);
+}
+.icon-javascript:before {
+    content: var(--icon-javascript);
+}
+.icon-help:before {
+    content: var(--icon-help);
+}
+.icon-hearthands:before {
+    content: var(--icon-hearthands);
+}
+.icon-handshake:before {
+    content: var(--icon-handshake);
+}
+.icon-gear-on-stack:before {
+    content: var(--icon-gear-on-stack);
+}
+.icon-gear-and-spanner:before {
+    content: var(--icon-gear-and-spanner);
+}
+.icon-gallery:before {
+    content: var(--icon-gallery);
+}
+.icon-form:before {
+    content: var(--icon-form);
+}
+.icon-first-aid-kit:before {
+    content: var(--icon-first-aid-kit);
+}
+.icon-film:before {
+    content: var(--icon-film);
+}
+.icon-familycopy:before {
+    content: var(--icon-familycopy);
+}
+.icon-family:before {
+    content: var(--icon-family);
+}
+.icon-eating:before {
+    content: var(--icon-eating);
+}
+.icon-drawing-tablet:before {
+    content: var(--icon-drawing-tablet);
+}
+.icon-critical-thinking:before {
+    content: var(--icon-critical-thinking);
+}
+.icon-collage:before {
+    content: var(--icon-collage);
+}
+.icon-class:before {
+    content: var(--icon-class);
+}
+.icon-check-start:before {
+    content: var(--icon-check-start);
+}
+.icon-calendarcopy:before {
+    content: var(--icon-calendarcopy);
+}
+.icon-calendar:before {
+    content: var(--icon-calendar);
+}
+.icon-article:before {
+    content: var(--icon-article);
+}
+.icon-animation:before {
+    content: var(--icon-animation);
+}
+.icon-3d-modeling:before {
+    content: var(--icon-3d-modeling);
+}

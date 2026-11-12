@@ -1,0 +1,24 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+
+
+    --base-width: 1200px;
+
+    --max-site-width: 1440px;
+
+    --mm-container-height:440px;
+    --mm-inner-height:400px;
+
+    --nav-height: 108px;
+
+    --mobile-breakpoint: 800px;
+
+    --font-sans: "Google Sans", Helvetica, Arial, Sans-Serif;
+    --font-sans-display: "Manrope", Helvetica, Arial, Sans-Serif;
+    --font-serif: "DM Serif Display", serif;
+
+}

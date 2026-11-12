@@ -1,0 +1,495 @@
+* {
+  font-family: var(--font-sans);
+}
+
+body {
+  background: var(--color-white);
+}
+
+.post, .page {
+  margin: 0;
+  padding: 0;
+}
+
+h1.site-title,
+p.site-title,
+p.site-description {
+  position: absolute !important;
+  color: transparent !important;
+  pointer-events: none !important;
+  left: -1000vw;
+}
+
+/* Typically contains our h1 which we want to keep on the page for screen reading and SEO, but we don't want it visually present for aesthetic reasons. */
+.entry-header {
+  position: absolute;
+  left: -9999999999999px;
+}
+
+.entry-header + .entry-content {
+  margin-top: 0px;
+}
+
+#page {
+  background: white;
+  color: var(--color-onyx);
+}
+#page h2 {
+  line-height: 1.15em;
+}
+
+@media screen and (max-width: 800px) {
+  .hide_on_mobile {
+    display: none !important;
+  }
+}
+/* THIS IS GOIGN TO BREAK THINGS */
+.wp-block-image img {
+  height: 100% !important;
+  object-fit: cover;
+}
+
+/* Blog stuff */
+.blog-post-format-overrides .sub-hero {
+  margin-bottom: 60px;
+}
+.blog-post-format-overrides .entry-content {
+  margin-bottom: 60px;
+}
+.blog-post-format-overrides .entry-content > *:not(.sub-hero) {
+  width: 900px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.blog-post-format-overrides .entry-content > *:not(.sub-hero) h2 {
+  margin-bottom: 16px;
+  line-height: 135%;
+}
+
+/* Footer */
+/* Archive */
+.navigation.posts-navigation {
+  text-align: center;
+}
+
+.blog-post-container {
+  width: var(--base-width);
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
+  gap: 20px;
+}
+.blog-post-container .blog-post {
+  display: flex;
+  flex-flow: column;
+  color: black;
+  text-decoration: none;
+  max-width: calc(100% - 2px);
+  border-radius: 10px;
+  border: 1px solid var(--color-lgray);
+}
+.blog-post-container .blog-post .image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /*flex:6;*/
+}
+.blog-post-container .blog-post .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.75s ease-out;
+}
+.blog-post-container .blog-post .content-area {
+  flex: 7;
+  display: flex;
+  flex-flow: column;
+  padding: 26px 33px;
+}
+.blog-post-container .blog-post .content-area h1, .blog-post-container .blog-post .content-area h2, .blog-post-container .blog-post .content-area h3 {
+  margin: 0px;
+  padding: 0px;
+}
+.blog-post-container .blog-post .content-area .text-container {
+  flex: 1;
+}
+.blog-post-container .blog-post .content-area .bottom-shelf {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-items: flex-end;
+}
+.blog-post-container .blog-post .content-area .bottom-shelf .date {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+.blog-post-container .blog-post .content-area .bottom-shelf .fake-link {
+  color: var(--color-onyx);
+  transition: color 0.5s ease-in-out;
+}
+.blog-post-container .blog-post .content-area .bottom-shelf .fake-link .arrow {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.blog-post-container .blog-post:hover .image-container img {
+  transform: scale(1.1);
+}
+.blog-post-container .blog-post:hover .bottom-shelf .fake-link {
+  color: var(--color-st-blue);
+}
+.blog-post-container .blog-post:hover .bottom-shelf .fake-link .arrow {
+  opacity: 1;
+}
+
+.second-coming h1, .second-coming h2, .second-coming h3 {
+  display: inline;
+  font-family: var(--font-sans-display);
+  text-transform: uppercase;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, var(--color-st-blue) 36%, var(--color-st-blue) 100%);
+}
+.second-coming h2 {
+  font-size: 66px;
+  font-weight: 700;
+}
+.second-coming p {
+  margin-top: 36px;
+  font-size: 32px;
+  line-height: 1.2em;
+}
+
+#comments {
+  width: var(--base-width);
+  max-width: 100%;
+  margin: 0px auto;
+}
+#comments .comment-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#comments .comment-list article.comment-body {
+  margin-bottom: 2rem;
+}
+#comments .comment-list ol, #comments .comment-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation.post-navigation,
+footer.entry-footer {
+  width: var(--base-width);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/*
+** Misc components
+**
+**
+*/
+.orange-subtitle {
+  color: var(--color-st-orange);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* TODO! Button cta component replaces this everywhere but in the nav/mega menu! Retrofit! */
+.mm-content .button {
+  color: black !important;
+  border: 1px solid black !important;
+  padding-top: 6px !important;
+  padding-bottom: 4px !important;
+}
+
+.mm-content a:focus {
+  outline: 2px dashed gray;
+}
+
+.mobile-link-heading {
+  display: none;
+}
+
+/*
+** Responsive breakpoints
+**
+**
+*/
+:root {
+  --base-width: 1120px;
+}
+
+@media screen and (min-width: 1600px) {
+  :root {
+    --base-width: 1200px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  :root {
+    --base-width: 1090px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  :root {
+    --base-width: 1000px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  :root {
+    --base-width: 960px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  :root {
+    --base-width: 860px;
+  }
+}
+@media screen and (max-width: 940px) {
+  :root {
+    --base-width: 90vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  /* :root {
+         --base-width: 600px;
+     }*/
+  .entry-content > *,
+  .nav-sub-container,
+  .entry-header > *,
+  #mega-menu .mm-container {
+    padding: 1rem;
+  }
+  #masthead ul.nav-menu {
+    display: none;
+  }
+  #masthead button.menu-toggle {
+    display: block;
+  }
+  body #mega-menu {
+    height: calc(100vh - 114px);
+    /*TODO: Check math? */
+    left: -100%;
+    transition: left 0.5s ease-in-out;
+  }
+  #mega-menu {
+    border-radius: 0px;
+  }
+  #mega-menu .mm-container {
+    display: flex;
+    padding: 0px;
+    flex-flow: column;
+    background: white;
+  }
+  #masthead .mobile-link-heading {
+    display: block;
+    padding: 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+  #masthead .mobile-link-heading .expander {
+    flex-grow: 1;
+    text-align: right;
+    background: none;
+    border: 0px;
+  }
+  #masthead .mobile-link-heading .expander .mobile-link-arrow {
+    display: inline-block;
+    transform: rotate(-90deg);
+    transition: transform 0.3s ease-in-out;
+  }
+  #masthead .mobile-link-heading + ul {
+    height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: height 0.3s ease-in-out, visibility 0s 0.3s;
+  }
+  #masthead .mobile-link-heading.expanded + ul {
+    height: attr(data-height px);
+    visibility: visible;
+    transition: height 0.3s ease-in-out, visibility 0s;
+  }
+  #masthead .mobile-link-heading.expanded .mobile-link-arrow {
+    transform: rotate(0deg);
+  }
+  .mobile-link-heading a:link,
+  .mobile-link-heading a:visited {
+    font-weight: bold;
+    text-decoration: none;
+  }
+  #mega-menu .mm-links:not([data-target=null]) {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1;
+    margin: 0.5rem 1rem;
+  }
+  #masthead #mega-menu ul li a {
+    height: 29px;
+    padding-left: 0px;
+    transition: padding-left 0.3s ease;
+  }
+  #masthead #mega-menu ul li a:hover {
+    padding-left: 0.5rem;
+  }
+  #mega-menu li svg {
+    display: none;
+  }
+  .mm-links li {
+    margin: 0.5rem 0.75rem;
+  }
+}
+ol.bordered-list,
+.bordered-list {
+  margin: 0px;
+  padding: 0px;
+  margin-left: 0rem;
+  list-style-position: inside;
+}
+ol.bordered-list li,
+.bordered-list li {
+  padding-bottom: 17px;
+  border-bottom: 1px solid rgba(231, 231, 231, 0.2901960784);
+  margin-bottom: 17px;
+}
+ol.bordered-list ol,
+.bordered-list ol {
+  margin: 0px;
+  padding: 0px;
+  margin-left: 0rem;
+  list-style-position: inside;
+}
+ol.bordered-list li::marker,
+.bordered-list li::marker {
+  padding-left: 5rem;
+  font-weight: bold;
+}
+
+.entry-footer .edit-link {
+  position: absolute;
+  padding: 1rem;
+}
+
+/* 404 */
+.error-404.not-found {
+  width: var(--base-width);
+  margin: 40px auto;
+  max-width: 100%;
+}
+
+/* Center content and set max width */
+.entry-content > *,
+.entry-header > * {
+  /* max-width: var(--base-width);*/
+  margin: 0 auto;
+}
+
+/* Utility */
+.fl-33 {
+  flex-basis: 33.33%;
+}
+
+.fl-66 {
+  flex-basis: 66.66%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .no-mobile, .hide-on-mobile {
+    display: none !important;
+  }
+}
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.all-caps {
+  text-transform: uppercase;
+}
+
+.opacity-point-nine {
+  opacity: 0.9;
+}
+
+/* Animations */
+@keyframes visible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    /*height:0px;*/
+    overflow: hidden;
+  }
+  100% {
+    opacity: 1;
+    /*height:122px;*/
+    overflow: visible;
+  }
+}
+.fade-in {
+  animation: fade-in 1.5s ease-in-out forwards;
+}
+
+[data-aos=highlight] {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 58%, #eae9fa 75%, #eae9fa 117%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 1s 0.1 ease-in-out;
+}
+
+[data-aos=highlight].aos-animate {
+  animation: do-highlight 1.5s ease-in-out forwards;
+}
+
+/* Text highlight effect */
+@keyframes do-highlight {
+  0% {
+    background-size: 0% 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+/*# sourceMappingURL=global.css.map */

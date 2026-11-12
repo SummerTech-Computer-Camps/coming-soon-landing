@@ -1,0 +1,316 @@
+/* =============================================================
+   BugPost (Free) — Frontend Widget Styles
+   ============================================================= */
+
+:root {
+    --bp-accent: #e74c3c;
+    --bp-accent-hover: #c0392b;
+    --bp-bg: #ffffff;
+    --bp-text: #333333;
+    --bp-text-light: #888888;
+    --bp-border: #e0e0e0;
+    --bp-success: #27ae60;
+    --bp-error: #e74c3c;
+    --bp-radius: 10px;
+    --bp-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    --bp-z: 999999;
+}
+
+/* -- Tab Button ------------------------------------------------ */
+
+#bugpost-tab {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: var(--bp-z);
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    padding: 14px 10px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--bp-accent);
+    border: none;
+    border-radius: var(--bp-radius) 0 0 var(--bp-radius);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    line-height: 1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#bugpost-tab:hover {
+    background: var(--bp-accent-hover);
+}
+
+#bugpost-tab.bp-hidden {
+    display: none;
+}
+
+/* -- Overlay Backdrop ------------------------------------------ */
+
+#bugpost-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: calc(var(--bp-z) + 1);
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+#bugpost-overlay.bp-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* -- Panel ----------------------------------------------------- */
+
+#bugpost-panel {
+    position: fixed;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%) translateX(30px);
+    z-index: calc(var(--bp-z) + 2);
+    width: 380px;
+    max-width: calc(100vw - 24px);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--bp-bg);
+    border-radius: var(--bp-radius);
+    box-shadow: var(--bp-shadow);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 14px;
+    color: var(--bp-text);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#bugpost-panel.bp-active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-50%) translateX(0);
+}
+
+/* -- Panel Header ---------------------------------------------- */
+
+.bp-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--bp-border);
+}
+
+.bp-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--bp-text);
+}
+
+.bp-close {
+    background: none;
+    border: none;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--bp-text-light);
+    cursor: pointer;
+    padding: 0 4px;
+    transition: color 0.2s;
+}
+
+.bp-close:hover {
+    color: var(--bp-text);
+}
+
+/* -- Panel Body ------------------------------------------------ */
+
+.bp-body {
+    padding: 20px;
+}
+
+/* -- Page context bar ------------------------------------------ */
+
+.bp-context {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    font-size: 11px;
+    color: var(--bp-text-light);
+    margin-bottom: 16px;
+    word-break: break-all;
+}
+
+.bp-context-icon {
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+/* -- Form Fields ----------------------------------------------- */
+
+.bp-field {
+    margin-bottom: 14px;
+}
+
+.bp-field label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--bp-text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.bp-field input[type="text"],
+.bp-field input[type="email"],
+.bp-field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid var(--bp-border);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--bp-text);
+    background: #fff;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.bp-field input:focus,
+.bp-field textarea:focus {
+    border-color: var(--bp-accent);
+    outline: none;
+}
+
+.bp-field textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Honeypot — visually hidden */
+.bp-hp {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+/* -- Submit Button --------------------------------------------- */
+
+.bp-submit {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--bp-accent);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 16px;
+}
+
+.bp-submit:hover {
+    background: var(--bp-accent-hover);
+}
+
+.bp-submit:active {
+    transform: scale(0.98);
+}
+
+.bp-submit:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* -- Success / Error Messages ---------------------------------- */
+
+.bp-message {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.bp-message-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.bp-message h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.bp-message p {
+    color: var(--bp-text-light);
+    margin: 0;
+    font-size: 13px;
+}
+
+.bp-message-success .bp-message-icon {
+    color: var(--bp-success);
+}
+
+.bp-message-error .bp-message-icon {
+    color: var(--bp-error);
+}
+
+.bp-new-report-btn {
+    margin-top: 16px;
+    padding: 10px 20px;
+    border: 2px solid var(--bp-border);
+    border-radius: 8px;
+    background: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--bp-text);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.bp-new-report-btn:hover {
+    border-color: var(--bp-accent);
+    color: var(--bp-accent);
+}
+
+/* -- Loading spinner ------------------------------------------- */
+
+.bp-spinner {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: bp-spin 0.6s linear infinite;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+@keyframes bp-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* -- Responsive ------------------------------------------------ */
+
+@media (max-width: 440px) {
+    #bugpost-panel {
+        width: calc(100vw - 16px);
+        right: 8px !important;
+        left: 8px !important;
+    }
+}
